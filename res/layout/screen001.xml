@@ -17,11 +17,11 @@
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/stocksymbol"
+                android:id="@+id/zipcode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="@string/stocksymbol"
+                android:text="@string/zipcode"
                 android:textSize="30dp" />
 
             <EditText
