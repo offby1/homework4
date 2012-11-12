@@ -29,7 +29,10 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                android:imeOptions="actionDone"
+                android:singleLine="true" 
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout

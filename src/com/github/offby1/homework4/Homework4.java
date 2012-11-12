@@ -13,11 +13,14 @@ import org.json.JSONObject;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 
 public class Homework4 extends Activity {
 
@@ -41,14 +44,31 @@ public class Homework4 extends Activity {
 
                 public void onClick(View v) {
 
-                    symbol = stockId.getText().toString();
-
-                    stockTask = new myAsyncTask();
-                    stockTask.execute(symbol);
+                    mumble();
 
                 }
             });
 
+        stockId.setOnEditorActionListener(new OnEditorActionListener() {
+
+                public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                    boolean handled = false;
+                    if (actionId == EditorInfo.IME_ACTION_DONE) {
+                        mumble ();
+                        handled = true;
+                    }
+                    return handled;
+                }
+
+            });
+
+    }
+
+    private void mumble() {
+        symbol = stockId.getText().toString();
+
+        stockTask = new myAsyncTask();
+        stockTask.execute(symbol);
     }
 
     public class myAsyncTask extends AsyncTask<String, Void, String> {
