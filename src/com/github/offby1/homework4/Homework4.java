@@ -7,7 +7,6 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import android.os.AsyncTask;
@@ -93,7 +92,12 @@ public class Homework4 extends Activity {
                 try {
                     responseText = EntityUtils.toString(entity);
                     JSONObject json = new JSONObject(responseText);
-                    returnedValue = "Frotz!!";
+                    returnedValue = json
+                        .getJSONObject ("query")
+                        .getJSONObject ("results")
+                        .getJSONObject ("channel")
+                        .getJSONObject ("astronomy")
+                        .getString ("sunrise");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
