@@ -75,8 +75,9 @@ public class Homework4 extends Activity {
         String returnedValue = "";
         @Override
             protected String doInBackground(String... parms) {
-            String currentURL = "http://finance.google.com/finance/info?client=ig&q=NASDAQ:"
-                + parms[0];
+
+            // Yes, this is buggy; parms[0] should be properly URL-escaped.
+            String currentURL = "http://query.yahooapis.com/v1/public/yql?q=Select%20*%20from%20weather.forecast%20where%20location%3D'" + parms[0] + "'&format=json";
             HttpClient client = new DefaultHttpClient();
             HttpConnectionParams
                 .setConnectionTimeout(client.getParams(), 30000);
@@ -91,14 +92,8 @@ public class Homework4 extends Activity {
                 HttpEntity entity = response.getEntity();
                 try {
                     responseText = EntityUtils.toString(entity);
-                    responseText = responseText.substring(3);
-                    JSONObject json = new JSONObject();
-                    JSONArray ja;
-                    ja = new JSONArray(responseText);
-                    for (int i = 0; i < ja.length(); i++) {
-                        json = ja.getJSONObject(i);
-                        returnedValue = json.get("l_cur").toString();
-                    }
+                    JSONObject json = new JSONObject(responseText);
+                    returnedValue = "Frotz!!";
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

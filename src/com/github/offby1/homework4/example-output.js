@@ -1,0 +1,63 @@
+{"query":{
+    "count":1,
+    "created":"2012-11-12T00:50:37Z",
+    "lang":"en-US",
+    "results":{
+        "channel":{
+            "title":"Yahoo! Weather - Seattle, WA",
+            "link":"http://us.rd.yahoo.com/dailynews/rss/weather/Seattle__WA/*http://weather.yahoo.com/forecast/USWA0395_f.html",
+            "description":"Yahoo! Weather for Seattle, WA",
+            "language":"en-us",
+            "lastBuildDate":"Sun, 11 Nov 2012 4:00 pm PST",
+            "ttl":"60",
+            "location":{
+                "city":"Seattle",
+                "country":"US",
+                "region":"WA"},
+            "units":{
+                "distance":"mi",
+                "pressure":"in",
+                "speed":"mph",
+                "temperature":"F"},
+            "wind":{
+                "chill":"44",
+                "direction":"120",
+                "speed":"6"},
+            "atmosphere":{
+                "humidity":"76",
+                "pressure":"30.15",
+                "rising":"0",
+                "visibility":"6"},
+            "astronomy":{
+                "sunrise":"7:09 am",
+                "sunset":"4:37 pm"},
+            "image":{
+                "title":"Yahoo! Weather",
+                "width":"142",
+                "height":"18",
+                "link":"http://weather.yahoo.com",
+                "url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},
+            "item":{
+                "title":"Conditions for Seattle, WA at 4:00 pm PST",
+                "lat":"47.62",
+                "long":"-122.32",
+                "link":"http://us.rd.yahoo.com/dailynews/rss/weather/Seattle__WA/*http://weather.yahoo.com/forecast/USWA0395_f.html",
+                "pubDate":"Sun, 11 Nov 2012 4:00 pm PST",
+                "condition":{"code":"11",
+                             "date":"Sun, 11 Nov 2012 4:00 pm PST",
+                             "temp":"46",
+                             "text":"Light Rain"},
+                "description":"\n<img src=\"http://l.yimg.com/a/i/us/we/52/11.gif\"/><br />\n<b>Current Conditions:</b><br />\nLight Rain, 46 F<BR />\n<BR /><b>Forecast:</b><BR />\nSun - Rain. High: 48 Low: 45<br />\nMon - Rain. High: 54 Low: 46<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Seattle__WA/*http://weather.yahoo.com/forecast/USWA0395_f.html\">Full Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)<br/>\n",
+                "forecast":[{"code":"12",
+                             "date":"11 Nov 2012",
+                             "day":"Sun",
+                             "high":"48",
+                             "low":"45",
+                             "text":"Rain"},{"code":"12",
+                                             "date":"12 Nov 2012",
+                                             "day":"Mon",
+                                             "high":"54",
+                                             "low":"46",
+                                             "text":"Rain"}],
+                "guid":{"isPermaLink":"false",
+                        "content":"USWA0395_2012_11_12_7_00_PST"}}}}}}
