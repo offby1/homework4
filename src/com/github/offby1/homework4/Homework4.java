@@ -1,4 +1,4 @@
-package com.example.lab0505;
+package com.github.offby1.homework4;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -19,7 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Lab0505 extends Activity {
+public class Homework4 extends Activity {
 
     myAsyncTask stockTask;
 
