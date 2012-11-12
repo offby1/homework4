@@ -92,12 +92,17 @@ public class Homework4 extends Activity {
                 try {
                     responseText = EntityUtils.toString(entity);
                     JSONObject json = new JSONObject(responseText);
+                    // Naturally I should really be checking for
+                    // errors here.  Also I should be using something
+                    // like XPATH for JSON, if such a thing exists.
                     returnedValue = json
                         .getJSONObject ("query")
                         .getJSONObject ("results")
                         .getJSONObject ("channel")
                         .getJSONObject ("astronomy")
                         .getString ("sunrise");
+                    // TODO -- how does one check for, and handle,
+                    // errors here?
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
